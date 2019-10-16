@@ -1,0 +1,18 @@
+package SingleResponsability;
+
+public enum Cargo {
+
+	  DESENVOLVEDOR(new DezOuVintePorcento()),
+	    DBA(new DezOuVintePorcento()),
+	    TESTER(new QuinzeOuVintePorcento());
+	
+	private RegraDeCalculo regra;
+	
+	Cargo(RegraDeCalculo regra){
+		this.regra = regra;
+	}
+	
+	public RegraDeCalculo getRegra() {
+		return regra;
+	}
+}
